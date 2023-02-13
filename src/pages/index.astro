@@ -1,0 +1,31 @@
+---
+import PageLayout from "../layouts/page-layout.astro"
+---
+
+<PageLayout>
+  00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space Let’s face it; if you
+  want to go to space, you might as well genuinely go to outer space and not hover kind of on the
+  edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+  Explore
+</PageLayout>
+
+<style>
+  body {
+    background-image: url("./home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+  @media only screen and (max-width: 768px) {
+    body {
+      background-image: url("./home/background-home-tablet.jpg");
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    body {
+      background-image: url("./home/background-home-mobile.jpg");
+    }
+  }
+</style>
