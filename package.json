@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write **/*.{astro,scss,css,json,md}"
+    "format": "prettier --write **/*.{astro,scss,css,json,md}",
+    "lint": "eslint src/**/*.{js,astro}"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,9 @@
     "astro": "^2.0.10"
   },
   "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "prettier": "2.8.3",
     "prettier-plugin-astro": "^0.8.0"
   }
