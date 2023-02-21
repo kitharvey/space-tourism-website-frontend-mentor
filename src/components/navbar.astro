@@ -1,16 +1,89 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1)
+---
+
 <nav>
-  <ul>
-    <li>
-      <a href="/" target="_blank" rel="noopener noreferrer"> 00 Home</a>
-    </li>
-    <li>
-      <a href="/destination" target="_blank" rel="noopener noreferrer"> 01 Destination</a>
-    </li>
-    <li>
-      <a href="#" target="_blank" rel="noopener noreferrer"> 02 Crew</a>
-    </li>
-    <li>
-      <a href="/technology" target="_blank" rel="noopener noreferrer"> 03 Technology</a>
-    </li>
-  </ul>
+  <div class="logo">
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+        ><g fill="none" fill-rule="evenodd"
+          ><circle cx="24" cy="24" r="24" fill="#FFF"></circle><path
+            fill="#0B0D17"
+            d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
+          ></path></g
+        ></svg
+      >
+    </a>
+  </div>
+  <div class="horizontal-line"></div>
+  <div class="menu">
+    <ul>
+      <li class={currentPath === "" ? "active" : ""}>
+        <a href="/"><p class="nav-text"><span>00</span><span>Home</span></p></a>
+      </li>
+      <li class={currentPath === "destination" ? "active" : ""}>
+        <a href="/destination"><p class="nav-text"><span>01</span><span>Destination</span></p></a>
+      </li>
+      <li class={currentPath === "crew" ? "active" : ""}>
+        <a href="/crew"><p class="nav-text"><span>02</span><span>Crew</span></p></a>
+      </li>
+      <li class={currentPath === "technology" ? "active" : ""}>
+        <a href="/technology"><p class="nav-text"><span>03</span><span>Technology</span></p></a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<style lang="scss">
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    .logo {
+      padding: 0 55px;
+    }
+    .horizontal-line {
+      height: 1px;
+      background: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+      width: 100%;
+      margin-right: -30px;
+      margin-left: 14px;
+      z-index: 10;
+    }
+    .menu {
+      padding: 0 120px;
+      background-color: #ffffff04;
+      backdrop-filter: blur(40px);
+      position: relative;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        gap: 48px;
+
+        li {
+          padding: 40px 0;
+          span:first-child {
+            font-weight: 700;
+            padding-right: 10px;
+          }
+        }
+
+        li.active {
+          border-bottom: 3px solid #ffffff;
+          margin-bottom: -3px;
+        }
+      }
+    }
+  }
+</style>

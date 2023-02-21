@@ -1,14 +1,99 @@
+---
+import Navbar from "../components/navbar.astro"
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
+    <Navbar />
     <slot />
   </body>
+
+  <style lang="scss" is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+    $background-color: #0b0d17;
+    $accent-color: #d0d6f9;
+    $foreground-color: #ffffff;
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: $foreground-color;
+      font-family: "Barlow";
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .subheading-one {
+      font-family: "Bellefair";
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    h5,
+    .subheading-two,
+    .nav-text {
+      font-family: "Barlow Condensed";
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 150px;
+      line-height: 172px;
+    }
+
+    h2 {
+      font-size: 100px;
+      line-height: 115px;
+    }
+    h3 {
+      font-size: 56px;
+      line-height: 64px;
+    }
+    h4 {
+      font-size: 32px;
+      line-height: 37px;
+    }
+    h5 {
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 4.725px;
+      color: $background-color;
+      border: 1px solid #000000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .subheading-one {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .subheading-two {
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+      text-transform: uppercase;
+    }
+
+    .nav-text {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+    }
+  </style>
 </html>
