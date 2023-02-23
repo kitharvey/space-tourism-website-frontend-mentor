@@ -3,22 +3,55 @@ import PageLayout from "../layouts/page-layout.astro"
 ---
 
 <PageLayout>
-  <div class="">
-    00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space Let’s face it; if
-    you want to go to space, you might as well genuinely go to outer space and not hover kind of on
-    the edge of it. Well sit back, and relax because we’ll give you a truly out of this world
-    experience! Explore
+  <div class="wrapper">
+    <div class="left">
+      <h5>So, you want to travel to</h5><h1>Space</h1><p>
+        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and
+        not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly
+        out of this world experience!
+      </p>
+    </div>
+    <div class="right">
+      <a href="" ><div class="explore" ><p>Explore</p></div></a>
+    </div>
   </div>
 </PageLayout>
 
-<style>
+<style lang="scss" >
+  @import '../styles/_variables.scss';
   body {
     background-image: url("./home/background-home-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
+
+    .wrapper {
+      .right {
+        .explore {
+          width: 274px;
+          height: 274px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          background-color: $foreground-color;
+          p {
+            font-family: 'Bellefair';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 37px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $background-color;
+          }
+        }
+      }
+    }
   }
+
+
   @media only screen and (max-width: 768px) {
     body {
       background-image: url("./home/background-home-tablet.jpg");

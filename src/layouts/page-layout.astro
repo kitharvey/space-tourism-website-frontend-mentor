@@ -16,84 +16,35 @@ import Navbar from "../components/navbar.astro"
   </body>
 
   <style lang="scss" is:global>
-    @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
-    $background-color: #0b0d17;
-    $accent-color: #d0d6f9;
-    $foreground-color: #ffffff;
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+@import '../styles/_fonts.scss';
 
-    body {
-      color: $foreground-color;
-      font-family: "Barlow";
-    }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    .subheading-one {
-      font-family: "Bellefair";
-      font-style: normal;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    h5,
-    .subheading-two,
-    .nav-text {
-      font-family: "Barlow Condensed";
-      font-style: normal;
-      font-weight: 400;
-    }
+ul {
+  list-style-type: none;
+}
 
-    h1 {
-      font-size: 150px;
-      line-height: 172px;
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    flex-grow: 1;
+    margin-bottom: 130px;
+    max-height: 900px;
+    .left {
+       max-width: 450px;
     }
-
-    h2 {
-      font-size: 100px;
-      line-height: 115px;
-    }
-    h3 {
-      font-size: 56px;
-      line-height: 64px;
-    }
-    h4 {
-      font-size: 32px;
-      line-height: 37px;
-    }
-    h5 {
-      font-size: 28px;
-      line-height: 34px;
-      letter-spacing: 4.725px;
-      color: $background-color;
-      border: 1px solid #000000;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    .subheading-one {
-      font-size: 28px;
-      line-height: 32px;
-    }
-    .subheading-two {
-      font-size: 14px;
-      line-height: 17px;
-      letter-spacing: 2.3625px;
-      text-transform: uppercase;
-    }
-
-    .nav-text {
-      font-size: 16px;
-      line-height: 19px;
-      letter-spacing: 2.7px;
-      text-transform: uppercase;
-    }
+  }
   </style>
 </html>

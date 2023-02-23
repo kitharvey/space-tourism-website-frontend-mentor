@@ -1,19 +1,23 @@
 ---
 import PageLayout from "../layouts/page-layout.astro"
+import {destinations} from '../data.json';
 ---
 
 <PageLayout>
-  <div class="">
-    00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space Let’s face it; if
-    you want to go to space, you might as well genuinely go to outer space and not hover kind of on
-    the edge of it. Well sit back, and relax because we’ll give you a truly out of this world
-    experience! Explore
+  <div class="wrapper">
+    01 Pick your destination
+
+    <ul>
+      {destinations.map(destination => (
+        <li>{destination.name}</li>
+      ))}
+    </ul>
   </div>
 </PageLayout>
 
 <style>
   body {
-    background-image: url("./home/background-home-desktop.jpg");
+    background-image: url("./destination/background-destination-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,13 +25,13 @@ import PageLayout from "../layouts/page-layout.astro"
   }
   @media only screen and (max-width: 768px) {
     body {
-      background-image: url("./home/background-home-tablet.jpg");
+      background-image: url("./destination/background-destination-tablet.jpg");
     }
   }
 
   @media only screen and (max-width: 480px) {
     body {
-      background-image: url("./home/background-home-mobile.jpg");
+      background-image: url("./destination/background-destination-mobile.jpg");
     }
   }
 </style>

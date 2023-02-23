@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import '../styles/_variables.scss';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $accent-color;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 1536px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+.subheading-one {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $foreground-color;
+}
+
+h5,
+.subheading-two,
+.nav-text {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 150px;
+  line-height: 172px;
+}
+
+h2 {
+  font-size: 100px;
+  line-height: 115px;
+}
+h3 {
+  font-size: 56px;
+  line-height: 64px;
+}
+h4 {
+  font-size: 32px;
+  line-height: 37px;
+}
+h5 {
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  color: $accent-color;
+}
+
+.subheading-one {
+  font-size: 18px;
+  line-height: 32px;
+}
+.subheading-two {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+}
+
+.nav-text {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
