@@ -1,6 +1,6 @@
 ---
-import PageLayout from "../layouts/page-layout.astro"
-import {crew} from '../data.json';
+import PageLayout from "../layouts/page-layout.astro";
+import { crew } from "../data.json";
 ---
 
 <PageLayout>
@@ -14,7 +14,7 @@ import {crew} from '../data.json';
 
 <style>
   body {
-    background-image: url("./home/background-home-desktop.jpg");
+    background-image: url("./crew/background-crew-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,13 +22,13 @@ import {crew} from '../data.json';
   }
   @media only screen and (max-width: 768px) {
     body {
-      background-image: url("./home/background-home-tablet.jpg");
+      background-image: url("./crew/background-crew-tablet.jpg");
     }
   }
 
   @media only screen and (max-width: 480px) {
     body {
-      background-image: url("./home/background-home-mobile.jpg");
+      background-image: url("./crew/background-crew-mobile.jpg");
     }
   }
 </style>

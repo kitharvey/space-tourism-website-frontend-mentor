@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
-@import '../styles/_variables.scss';
+@import "../styles/_variables.scss";
 *,
 *::before,
 *::after {
@@ -10,7 +10,7 @@
 
 body {
   color: $accent-color;
-  font-family: 'Barlow';
+  font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

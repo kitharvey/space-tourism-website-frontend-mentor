@@ -1,6 +1,6 @@
 ---
-import PageLayout from "../layouts/page-layout.astro"
-import {destinations} from '../data.json';
+import PageLayout from "../layouts/page-layout.astro";
+import { destinations } from "../data.json";
 ---
 
 <PageLayout>
@@ -8,9 +8,7 @@ import {destinations} from '../data.json';
     01 Pick your destination
 
     <ul>
-      {destinations.map(destination => (
-        <li>{destination.name}</li>
-      ))}
+      {destinations.map((destination) => <li>{destination.name}</li>)}
     </ul>
   </div>
 </PageLayout>

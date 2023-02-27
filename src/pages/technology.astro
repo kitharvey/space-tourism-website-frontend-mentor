@@ -1,7 +1,6 @@
 ---
-import PageLayout from "../layouts/page-layout.astro"
-import {technology} from '../data.json';
-
+import PageLayout from "../layouts/page-layout.astro";
+import { technology } from "../data.json";
 ---
 
 <PageLayout>
@@ -15,7 +14,7 @@ import {technology} from '../data.json';
 
 <style>
   body {
-    background-image: url("./home/background-home-desktop.jpg");
+    background-image: url("./technology/background-technology-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -23,13 +22,13 @@ import {technology} from '../data.json';
   }
   @media only screen and (max-width: 768px) {
     body {
-      background-image: url("./home/background-home-tablet.jpg");
+      background-image: url("./technology/background-technology-tablet.jpg");
     }
   }
 
   @media only screen and (max-width: 480px) {
     body {
-      background-image: url("./home/background-home-mobile.jpg");
+      background-image: url("./technology/background-technology-mobile.jpg");
     }
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/navbar.astro"
+import Navbar from "../components/navbar.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,35 +16,35 @@ import Navbar from "../components/navbar.astro"
   </body>
 
   <style lang="scss" is:global>
-@import '../styles/_fonts.scss';
+    @import "../styles/_fonts.scss";
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    max-width: 1110px;
-    margin: 0 auto;
-    flex-grow: 1;
-    margin-bottom: 130px;
-    max-height: 900px;
-    .left {
-       max-width: 450px;
+    body {
+      display: flex;
+      flex-direction: column;
     }
-  }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 1110px;
+      margin: 0 auto;
+      flex-grow: 1;
+      margin-bottom: 130px;
+      max-height: 900px;
+      .left {
+        max-width: 450px;
+      }
+    }
   </style>
 </html>
